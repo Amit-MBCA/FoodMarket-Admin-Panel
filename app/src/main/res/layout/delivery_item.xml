@@ -26,12 +26,10 @@
                 android:id="@+id/idcusotmername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
                 android:text="Customer Name"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/idpayment"
-                app:layout_constraintEnd_toEndOf="@+id/idpayment"
-                app:layout_constraintStart_toStartOf="@+id/idpayment"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -42,21 +40,19 @@
                 android:textColor="#B3B3B3"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/idreceived"
-                app:layout_constraintEnd_toEndOf="@+id/idreceived"
-                app:layout_constraintStart_toStartOf="@+id/idreceived"
+                app:layout_constraintStart_toStartOf="@+id/idcusotmername"
                 app:layout_constraintTop_toBottomOf="@+id/idcusotmername" />
 
             <TextView
                 android:id="@+id/idreceived"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="Not Received"
                 android:textColor="#ff3b3b"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/idpayment"
                 app:layout_constraintTop_toBottomOf="@+id/idpayment" />
 
             <TextView

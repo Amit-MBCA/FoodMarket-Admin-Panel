@@ -24,9 +24,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.idpendingorder.setOnClickListener {
+            val intent=Intent(this,PendingOrderActivity::class.java)
+            startActivity(intent)
+        }
+        binding.iddispatchbtn.setOnClickListener {
             val intent=Intent(this,OutForDeliveryActivity::class.java)
             startActivity(intent)
         }
+        binding.idprofilebtn.setOnClickListener {
+            val intent=Intent(this,AdminProfileActivity::class.java)
+            startActivity(intent)
+        }
+        binding.idcreateuser.setOnClickListener {
+            val intent=Intent(this,CreateUserActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }

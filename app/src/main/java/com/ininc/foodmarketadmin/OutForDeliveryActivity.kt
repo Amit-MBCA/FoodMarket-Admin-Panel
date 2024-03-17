@@ -22,6 +22,8 @@ class OutForDeliveryActivity : AppCompatActivity() {
         val adapter=DeliveryAdapter(customerName,moneyStatus)
         binding.iddeliveryrv.layoutManager=LinearLayoutManager(this)
         binding.iddeliveryrv.adapter=adapter
-
+        binding.idbackbtn.setOnClickListener {
+            finish()
+        }
     }
 }
