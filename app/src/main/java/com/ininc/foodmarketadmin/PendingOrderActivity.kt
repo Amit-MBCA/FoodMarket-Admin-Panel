@@ -19,7 +19,7 @@ class PendingOrderActivity : AppCompatActivity() {
         setContentView(binding.root)
         val customerName= arrayListOf("Abhay","Vikas","Shivam","Shubham","Vinay")
         val ordersQuantity= arrayListOf("4","3","1","5","2")
-        val orderedFoodImages= arrayListOf(R.drawable.croppedcirclelogo,R.drawable.croppedcirclelogo,R.drawable.croppedcirclelogo,R.drawable.croppedcirclelogo,R.drawable.croppedcirclelogo)
+        val orderedFoodImages= arrayListOf(R.drawable.pizzaimg,R.drawable.sandwichimg,R.drawable.frenchfriesimg,R.drawable.kimchiimg,R.drawable.friedriceimg)
         val adapter= PendingOrderAdapter(customerName,ordersQuantity,orderedFoodImages,this)
         binding.idpendingorderrv.layoutManager= LinearLayoutManager(this)
         binding.idpendingorderrv.adapter=adapter

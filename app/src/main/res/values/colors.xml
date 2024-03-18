@@ -5,4 +5,7 @@
     <color name="textColor">#1fc57a</color>
     <color name="startColor">#53e88b</color>
     <color name="endColor">#15be77</color>
+    <color name="primaryColor">#DF2619</color>
+    <color name="logouttext">#EB0C0C</color>
+    <color name="dispatchtext">#EBB70B</color>
 </resources>

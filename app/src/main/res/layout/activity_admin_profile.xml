@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".AdminProfileActivity">
+
     <ImageView
         android:id="@+id/idbackbtn"
         android:layout_width="24dp"
@@ -15,7 +16,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/transparentshape"
         android:scaleType="centerCrop"
-        android:src="@drawable/mail_24"
+        android:src="@drawable/backbtnicon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,9 +24,10 @@
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/allerta"
         android:text="Admin Profile"
-        android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/idbackbtn"
         app:layout_constraintTop_toTopOf="@+id/idbackbtn" />
@@ -34,9 +36,11 @@
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/allerta"
         android:text="Edit Your Profile"
-        android:textColor="@color/textColor"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/idbackbtn"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -44,14 +48,17 @@
         android:id="@+id/ideditbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:clickable="true"
-        android:drawableLeft="@drawable/mail_24"
+        android:drawableLeft="@drawable/edit24primary"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/allerta"
         android:gravity="center_vertical"
+        android:padding="2dp"
         android:text="Click Here To Edit"
         android:textAlignment="gravity"
-        android:textColor="@color/textColor"
+        android:textColor="@color/primaryColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -71,15 +78,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView21">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="47dp"
             android:layout_weight="1"
+            android:fontFamily="@font/allerta"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
             android:text="Name"
             android:textAlignment="gravity"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textColor="@color/textColor"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/idnameetv"
@@ -91,7 +99,8 @@
             android:inputType="text"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="Name" />
+            android:text="Amit"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -114,12 +123,13 @@
             android:layout_width="80dp"
             android:layout_height="47dp"
             android:layout_weight="1"
+            android:fontFamily="@font/allerta"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
             android:text="Address"
             android:textAlignment="gravity"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textColor="@color/textColor"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/idaddressetv"
@@ -132,7 +142,8 @@
             android:padding="4dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="Dhillowala Jila Jind Block Alewa State Haryana Kaithal Karnal" />
+            android:text="Dhillowala Jila Jind Block Alewa State Haryana Kaithal Karnal"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -154,12 +165,13 @@
             android:layout_width="80dp"
             android:layout_height="47dp"
             android:layout_weight="1"
+            android:fontFamily="@font/allerta"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
             android:text="Email"
             android:textAlignment="gravity"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textColor="@color/textColor"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/idemailetv"
@@ -171,7 +183,8 @@
             android:inputType="textEmailAddress"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="airmalik@gmail.com" />
+            android:text="airmalik@gmail.com"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -193,12 +206,13 @@
             android:layout_width="80dp"
             android:layout_height="47dp"
             android:layout_weight="1"
+            android:fontFamily="@font/allerta"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
             android:text="Phone"
             android:textAlignment="gravity"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textColor="@color/textColor"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/idphoneetv"
@@ -210,7 +224,8 @@
             android:inputType="phone"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="+91 9999999999" />
+            android:text="+91 9999999999"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -232,12 +247,13 @@
             android:layout_width="80dp"
             android:layout_height="47dp"
             android:layout_weight="1"
+            android:fontFamily="@font/allerta"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
-            android:text="Name"
+            android:text="Password"
             android:textAlignment="gravity"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textColor="@color/textColor"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/idpasswordetv"
@@ -249,7 +265,8 @@
             android:inputType="textPassword"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="asdfjkl;" />
+            android:text="asdfjkl;"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -259,26 +276,28 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/edittextshape"
+        android:fontFamily="@font/allerta"
         android:text="Save Information"
         android:textAllCaps="false"
         android:textColor="@color/textColor"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView27"
+        app:layout_constraintBottom_toTopOf="@+id/iddesignedbytv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/iddesignedbytv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:lineSpacingExtra="5dp"
-        android:text="Designed By\neAll"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/allerta"
+        android:text="Designed By eAll"
         android:textAlignment="center"
         android:textColor="@color/textColor"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

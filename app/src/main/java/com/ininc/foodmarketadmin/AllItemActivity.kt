@@ -16,9 +16,9 @@ class AllItemActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        val menuFoodName=listOf("Burger","Sandwich","Momos","Item","Sandwich","Momos")
-        val menuItemPrice= listOf("$5","$4","$6","$5","$4","$6")
-        val menuImages= listOf(R.drawable.logowithbg,R.drawable.logowithbg,R.drawable.logowithbg,R.drawable.logowithbg,R.drawable.logowithbg,R.drawable.logowithbg)
+        val menuFoodName=listOf("Pizza","Sandwich","French Fries","Kimchi","Fried Rice","Momos","Burger")
+        val menuItemPrice= listOf("₹199","₹40","₹60","₹150","₹40","₹60","₹35")
+        val menuImages= listOf(R.drawable.pizzaimg,R.drawable.sandwichimg,R.drawable.frenchfriesimg,R.drawable.kimchiimg,R.drawable.friedriceimg,R.drawable.momosimg,R.drawable.burgerimg)
         val adapter=AddItemAdapter(ArrayList(menuFoodName),ArrayList(menuItemPrice),ArrayList(menuImages))
         binding.MenuRecyclerView.layoutManager=LinearLayoutManager(this)
         binding.MenuRecyclerView.adapter=adapter
