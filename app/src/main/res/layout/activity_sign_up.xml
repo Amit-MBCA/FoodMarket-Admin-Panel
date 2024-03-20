@@ -110,7 +110,7 @@
         android:drawablePadding="8dp"
         android:elevation="5dp"
         android:ems="10"
-        android:hint="Email Or Phone Number"
+        android:hint="Email"
         android:inputType="textPassword"
         android:outlineSpotShadowColor="@color/textColor"
         android:paddingLeft="15dp"

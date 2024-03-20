@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "602216025127",
+    "firebase_url": "https://foodmarket-274d1-default-rtdb.firebaseio.com",
+    "project_id": "foodmarket-274d1",
+    "storage_bucket": "foodmarket-274d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602216025127:android:34e81eccff679e5561d202",
+        "android_client_info": {
+          "package_name": "com.ininc.foodmarketadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602216025127-4n31d1dordu74hi6p0750b0a3nn8vlb8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ininc.foodmarketadmin",
+            "certificate_hash": "629bb58cbd8cdbeb4bcd1cf5abb8e8f2141b242b"
+          }
+        },
+        {
+          "client_id": "602216025127-ph5s7nvvrjkaul17s3lesel0cb9vv4rp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkpznIjTeGfyR7l0wq2Du8y24uoVepcJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602216025127-ph5s7nvvrjkaul17s3lesel0cb9vv4rp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
