@@ -135,8 +135,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/transparentshape"
+                android:hint="Add Here Desciption"
                 android:paddingLeft="15dp"
-                android:text="This dist is made up with some maida and aalo's to make it crispy we boil it in refind oil"
                 app:layout_constraintStart_toStartOf="@+id/textView25"
                 app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
@@ -161,8 +161,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/transparentshape"
+                android:hint="Add Ingredients"
                 android:paddingLeft="15dp"
-                android:text="First Item\nSecond Item\nThird Item"
                 app:layout_constraintStart_toStartOf="@+id/textView27"
                 app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
