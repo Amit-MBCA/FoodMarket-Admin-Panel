@@ -42,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.idcreateaccountbtn.setOnClickListener{
             email=binding.idemailorphone.text.toString().trim()
-            userName=binding.idnameofowner.text.toString().trim()
+            userName=binding.idnameofowner.text.toString()
             restoName=binding.idnameofresto.text.toString().trim()
             password=binding.idsignuppassword.text.toString().trim()
 
