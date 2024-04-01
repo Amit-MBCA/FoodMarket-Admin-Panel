@@ -1,14 +1,16 @@
 package com.ininc.foodmarketadmin.adapter
 
 import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.ininc.foodmarketadmin.databinding.PendingOrdersItemBinding
 //import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
-class PendingOrderAdapter(private val customerNames:ArrayList<String>,private val quantity:ArrayList<String>,private val foodImages:ArrayList<Int>,private val context:Context):
+class PendingOrderAdapter(private val customerNames:MutableList<String>,private val quantity:MutableList<String>,private val foodImages:MutableList<String>,private val context:Context):
     RecyclerView.Adapter<PendingOrderAdapter.PendingOrderViewHolder>() {
 
 
@@ -28,8 +30,10 @@ class PendingOrderAdapter(private val customerNames:ArrayList<String>,private va
             binding.apply {
                 idcustomername.text=customerNames[position]
                 iditemsquantity.text=quantity[position]
-                idorderedfoodimage.setImageResource(foodImages[position])
-
+//                idorderedfoodimage.setImageResource(foodImages[position])
+                val imgString=foodImages[position]
+                var uri= Uri.parse(imgString)
+                Glide.with(context).load(uri).into(idorderedfoodimage)
                 idorderacceptbtn.apply {
                     if((!isAccepted)){
                         text="Accept"

@@ -60,7 +60,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     app:layout_constraintEnd_toEndOf="@+id/idpendingorder"
                     app:layout_constraintStart_toStartOf="@+id/guideline2"
                     app:layout_constraintTop_toTopOf="@+id/guideline"
@@ -71,8 +72,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
                     android:fontFamily="serif"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:text="Pending Order"
                     android:textColor="@color/primaryColor"
                     android:textSize="20sp"
@@ -81,21 +83,26 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_weight="1"
-                    android:fontFamily="serif"
-                    android:text="₹ 300"
-                    android:textAlignment="viewEnd"
-                    android:textColor="@color/primaryColor"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="@+id/idpendingorder"
-                    app:layout_constraintStart_toStartOf="@+id/guideline2"
-                    app:layout_constraintTop_toBottomOf="@+id/idpendingorder" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:drawableRight="@drawable/rupee_primarycolor"
+                        android:fontFamily="serif"
+                        android:text="300"
+                        android:textAlignment="center"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -108,7 +115,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     app:layout_constraintEnd_toEndOf="@+id/textView15"
                     app:layout_constraintStart_toStartOf="@+id/textView15"
                     app:layout_constraintTop_toTopOf="@+id/guideline"
@@ -119,8 +127,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
                     android:fontFamily="serif"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:text="Completed Order"
                     android:textAlignment="center"
                     android:textColor="@color/textColor"
@@ -130,21 +139,27 @@
                     app:layout_constraintStart_toEndOf="@+id/idpendingorder"
                     app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_weight="1"
-                    android:fontFamily="serif"
-                    android:text="₹ 300"
-                    android:textAlignment="viewEnd"
-                    android:textColor="@color/textColor"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView15"
-                    app:layout_constraintStart_toStartOf="@+id/textView15"
-                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/rupee_textcolor"
+                        android:fontFamily="serif"
+                        android:text="300"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -157,8 +172,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:src="@drawable/earn24"
                     app:layout_constraintEnd_toEndOf="@+id/textView17"
                     app:layout_constraintHorizontal_bias="0.6"
@@ -170,10 +186,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
                     android:fontFamily="serif"
-                    android:text="Whole Time Earning"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="Whole Earning"
                     android:textAlignment="center"
                     android:textColor="@color/dispatchtext"
                     android:textSize="20sp"
@@ -183,22 +199,27 @@
                     app:layout_constraintStart_toEndOf="@+id/textView15"
                     app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_weight="1"
-                    android:fontFamily="serif"
-                    android:text="₹ 300"
-                    android:textAlignment="viewEnd"
-                    android:textColor="@color/dispatchtext"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView17"
-                    app:layout_constraintStart_toStartOf="@+id/textView17"
-                    app:layout_constraintTop_toBottomOf="@+id/textView17"
-                    android:layout_marginBottom="8dp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/rupeedispatch"
+                        android:fontFamily="serif"
+                        android:text="300"
+                        android:textAlignment="center"
+                        android:textColor="@color/dispatchtext"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
 
         </LinearLayout>

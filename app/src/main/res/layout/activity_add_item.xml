@@ -69,6 +69,7 @@
                 android:layout_height="57dp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/edittextshape"
+                android:drawableLeft="@drawable/rupee24black"
                 android:elevation="5dp"
                 android:hint="Enter Food Price"
                 android:inputType="text"
