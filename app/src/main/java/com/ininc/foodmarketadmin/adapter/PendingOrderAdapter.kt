@@ -10,9 +10,14 @@ import com.bumptech.glide.Glide
 import com.ininc.foodmarketadmin.databinding.PendingOrdersItemBinding
 //import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
-class PendingOrderAdapter(private val customerNames:MutableList<String>,private val quantity:MutableList<String>,private val foodImages:MutableList<String>,private val context:Context):
+class PendingOrderAdapter(private val customerNames:MutableList<String>,private val totalPrice:MutableList<String>,private val foodImages:MutableList<String>,private val context:Context,private val itemClicked:OnItemClicked):
     RecyclerView.Adapter<PendingOrderAdapter.PendingOrderViewHolder>() {
-
+    interface OnItemClicked{
+        fun onItemClickListener(position: Int)
+        fun onItemAcceptClickListener(position: Int)
+        fun onItemDispatchClickListener(position: Int)
+//        abstract fun updateOrderAcceptStatus(position: Int)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PendingOrderViewHolder {
         val binding=PendingOrdersItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -29,7 +34,7 @@ class PendingOrderAdapter(private val customerNames:MutableList<String>,private 
         fun bind(position: Int) {
             binding.apply {
                 idcustomername.text=customerNames[position]
-                iditemsquantity.text=quantity[position]
+                iditemstotalpay.text=totalPrice[position]
 //                idorderedfoodimage.setImageResource(foodImages[position])
                 val imgString=foodImages[position]
                 var uri= Uri.parse(imgString)
@@ -46,13 +51,18 @@ class PendingOrderAdapter(private val customerNames:MutableList<String>,private 
                             text="Dispatch"
                             isAccepted = true
                             showToast("Order is Accepted")
+                            itemClicked.onItemAcceptClickListener(position)
                         }
                         else{
                             customerNames.removeAt(adapterPosition)
                             notifyItemRemoved(adapterPosition)
                             showToast("Order is Dispatched")
+                            itemClicked.onItemDispatchClickListener(position)
                         }
                     }
+                }
+                itemView.setOnClickListener {
+                    itemClicked.onItemClickListener(position)
                 }
             }
 

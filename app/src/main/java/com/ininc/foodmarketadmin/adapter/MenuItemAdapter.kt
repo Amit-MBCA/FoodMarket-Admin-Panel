@@ -14,7 +14,8 @@ import com.ininc.foodmarketadmin.model.AllMenu
 class MenuItemAdapter(
     private val context: Context,
     private val menuList: ArrayList<AllMenu>,
-    databaseReference: DatabaseReference
+    private val databaseReference: DatabaseReference,
+    private val onDeleteClickListener:(position: Int) -> Unit
 ):
     RecyclerView.Adapter<MenuItemAdapter.AddItemViewHolder>() {
 
@@ -51,7 +52,8 @@ class MenuItemAdapter(
                     increaseQuantity(position)
                 }
                 iditemdeletebtn.setOnClickListener {
-                    deleteQuantity(position)
+//                    deleteQuantity(position)
+                    onDeleteClickListener(position)
                 }
 
 
@@ -61,8 +63,7 @@ class MenuItemAdapter(
 
         private fun deleteQuantity(position: Int) {
             menuList.removeAt(position)
-            menuList.removeAt(position)
-            menuList.removeAt(position)
+
             notifyItemRemoved(position)
             notifyItemRangeChanged(position,menuList.size)
         }

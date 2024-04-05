@@ -99,7 +99,6 @@
             android:inputType="text"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="Amit"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -142,7 +141,6 @@
             android:padding="4dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="Dhillowala Jila Jind Block Alewa State Haryana Kaithal Karnal"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -183,7 +181,6 @@
             android:inputType="textEmailAddress"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="airmalik@gmail.com"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -224,7 +221,6 @@
             android:inputType="phone"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="+91 9999999999"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -265,11 +261,11 @@
             android:inputType="textPassword"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="asdfjkl;"
             android:textSize="16sp" />
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveinfobtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

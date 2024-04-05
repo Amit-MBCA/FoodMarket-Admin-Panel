@@ -88,13 +88,11 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/idpendingorders"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:drawableRight="@drawable/rupee_primarycolor"
                         android:fontFamily="serif"
-                        android:text="300"
                         android:textAlignment="center"
                         android:textColor="@color/primaryColor"
                         android:textSize="20sp"
@@ -144,14 +142,12 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/idcompletedorders"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:drawableRight="@drawable/rupee_textcolor"
                         android:fontFamily="serif"
-                        android:text="300"
                         android:textAlignment="center"
                         android:textColor="@color/textColor"
                         android:textSize="20sp"
@@ -204,14 +200,13 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/idwholetimeearn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="1"
                         android:drawableRight="@drawable/rupeedispatch"
                         android:fontFamily="serif"
-                        android:text="300"
                         android:textAlignment="center"
                         android:textColor="@color/dispatchtext"
                         android:textSize="20sp"
@@ -463,6 +458,7 @@
         app:layout_constraintTop_toTopOf="@+id/iddispatchbtn">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/idlogoutbtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/cardgreen">

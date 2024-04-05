@@ -3,6 +3,7 @@ package com.ininc.foodmarketadmin.model
 import android.net.Uri
 
 data class AllMenu(
+    val key:String?=null,
     val foodName:String?=null,
     val foodPrice:String?=null,
     val foodDesc:String?=null,

@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
@@ -42,12 +41,12 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/idcustomername"
+                android:id="@+id/idfoodname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/allerta"
-                android:text="Customer Name"
+                android:text="Food Name"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/idquantity"
@@ -61,15 +60,15 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/allerta"
-                android:text="Total Pay"
+                android:text="Quantity"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/cardView3"
-                app:layout_constraintTop_toBottomOf="@+id/idcustomername" />
+                app:layout_constraintTop_toBottomOf="@+id/idfoodname" />
 
             <TextView
-                android:id="@+id/iditemstotalpay"
+                android:id="@+id/iditemquantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -81,16 +80,15 @@
                 app:layout_constraintStart_toEndOf="@+id/idquantity"
                 app:layout_constraintTop_toTopOf="@+id/idquantity" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/idorderacceptbtn"
+            <TextView
+                android:id="@+id/idorderfoodprice"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/greenbuttongradient"
-                android:fontFamily="@font/allerta"
-                android:text="Accept"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:drawableRight="@drawable/rupee_textcolor"
+                android:text="320"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
