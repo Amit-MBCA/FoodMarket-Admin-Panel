@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.ininc.foodmarketadmin.databinding.ActivityAddItemBinding
@@ -25,6 +26,8 @@ class AddItemActivity : AppCompatActivity() {
     private var foodImageUri:Uri ?= null
     private lateinit var foodDesc:String
     private lateinit var foodIngred:String
+    private var isFresh=false
+    private lateinit var menuRef:DatabaseReference
 
     //Firebase
     private lateinit var auth:FirebaseAuth
@@ -58,6 +61,9 @@ class AddItemActivity : AppCompatActivity() {
 
 
         }
+        binding.idfreshswitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            isFresh = isChecked
+        }
         binding.idselectimage.setOnClickListener {
             pickImage.launch("image/*")
         }
@@ -71,7 +77,14 @@ class AddItemActivity : AppCompatActivity() {
 
     private fun uploadData() {
         //Get a reference to the "menu" node in the database
-        val menuRef=database.getReference("menu")
+
+        if(isFresh){
+            menuRef=database.getReference("menu").child("fresh")
+        }
+        else{
+            menuRef=database.getReference("menu").child("general")
+        }
+
         //Generate a unique key for the new menu
         val newItemKey=menuRef.push().key
 

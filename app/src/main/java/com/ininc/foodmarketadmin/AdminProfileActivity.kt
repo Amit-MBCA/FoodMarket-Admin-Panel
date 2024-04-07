@@ -36,6 +36,10 @@ class AdminProfileActivity : AppCompatActivity() {
         binding.idphoneetv.isEnabled=false
         binding.idpasswordetv.isEnabled=false
         binding.saveinfobtn.isEnabled=false
+        binding.idnameetv.setText("Your Name")
+        binding.idphoneetv.setText("Your Phone")
+        binding.idaddressetv.setText("Your Address")
+
         var isEnable=false
         retrieveUserData()
         binding.ideditbtn.setOnClickListener {

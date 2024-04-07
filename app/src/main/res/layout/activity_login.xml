@@ -96,15 +96,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/idfacebookbtn"
-        android:layout_width="152dp"
+        android:id="@+id/idphonebtn"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/whitebutton"
-        android:drawableLeft="@drawable/facebookicon"
+        android:drawableLeft="@drawable/phoneicon24"
+        android:drawablePadding="10dp"
         android:fontFamily="@font/allerta"
-        android:paddingLeft="15dp"
-        android:text="Facebook"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="Phone"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/idgooglebtn"
         app:layout_constraintHorizontal_bias="0.5"
@@ -113,18 +115,20 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/idgooglebtn"
-        android:layout_width="152dp"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/whitebutton"
         android:drawableLeft="@drawable/googleicon"
+        android:drawablePadding="10dp"
         android:fontFamily="@font/allerta"
-        android:paddingLeft="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
         android:text="Google"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/idfacebookbtn"
+        app:layout_constraintStart_toEndOf="@+id/idphonebtn"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -142,7 +146,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idfacebookbtn" />
+        app:layout_constraintTop_toBottomOf="@+id/idphonebtn" />
 
     <TextView
         android:id="@+id/donothavebutton"

@@ -65,7 +65,10 @@ class LoginActivity : AppCompatActivity() {
             val signInIntent=googleSignInClient.signInIntent
             launcher.launch(signInIntent)
         }
-
+        binding.idphonebtn.setOnClickListener {
+            val intent=Intent(this,PhoneAuthentication::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun createUserAccount(email: String, password: String) {

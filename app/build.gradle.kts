@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
     implementation(libs.play.services.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage.ktx)
@@ -57,5 +58,8 @@ dependencies {
 
     //Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    implementation ("io.github.chaosleung:pinview:1.4.4")
+
 
 }

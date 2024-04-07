@@ -50,7 +50,7 @@
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/edittextshape"
                 android:elevation="5dp"
@@ -60,8 +60,9 @@
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                app:layout_constraintTop_toBottomOf="@+id/idfreshswitch" />
 
             <EditText
                 android:id="@+id/identerfoodprice"
@@ -183,6 +184,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/idingredientstv" />
+
+            <Switch
+                android:id="@+id/idfreshswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/fresh_bg"
+                android:elevation="3dp"
+                android:fontFamily="@font/allerta"
+                android:padding="10dp"
+                android:text="FM Fresh"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
