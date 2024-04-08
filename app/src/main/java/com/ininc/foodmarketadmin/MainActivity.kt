@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity() {
             auth.signOut()
             startActivity(Intent(this,LoginActivity::class.java))
             finish()
-//            Toast.makeText(this,"Logout Successfully",Toast.LENGTH_SHORT).show()
         }
 
         pendingOrders()

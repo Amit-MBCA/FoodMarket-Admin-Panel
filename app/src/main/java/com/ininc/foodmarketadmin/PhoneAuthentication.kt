@@ -101,7 +101,7 @@ class PhoneAuthentication : AppCompatActivity() {
                 if(task.isSuccessful){
                     Log.d("IsSuccessful","SignInWithLoginCredentials Success")
                     val user=task.result?.user
-                    Toast.makeText(this,"On intent mode", Toast.LENGTH_LONG).show()
+//                    Toast.makeText(this,"On intent mode", Toast.LENGTH_LONG).show()
 
                     val intent= Intent(this@PhoneAuthentication,MainActivity::class.java)
                     startActivity(intent)

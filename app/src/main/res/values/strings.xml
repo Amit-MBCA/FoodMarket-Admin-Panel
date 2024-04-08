@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FoodMarketAdmin</string>
     <string name="default_client_id">602216025127-4n31d1dordu74hi6p0750b0a3nn8vlb8.apps.googleusercontent.com</string>
+    <string name="default_web_client_id">602216025127-4n31d1dordu74hi6p0750b0a3nn8vlb8.apps.googleusercontent.com</string>
 </resources>
