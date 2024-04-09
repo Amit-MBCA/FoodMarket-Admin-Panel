@@ -41,7 +41,7 @@ class AllItemActivity : AppCompatActivity() {
 
     private fun retrieveMenuItem() {
         database=FirebaseDatabase.getInstance()
-        val foodRef:DatabaseReference=database.reference.child("menu")
+        val foodRef:DatabaseReference=database.reference.child("menu").child("general")
 
         //fetch food data from database
         foodRef.addListenerForSingleValueEvent(object :ValueEventListener{
@@ -75,7 +75,7 @@ class AllItemActivity : AppCompatActivity() {
     private fun deleteMenuItems(position: Int) {
         val menuItemToDelete=menuItems[position]
         val menuItemKey=menuItemToDelete.key
-        val foodMenuReference=database.reference.child("menu").child(menuItemKey!!)
+        val foodMenuReference=database.reference.child("menu").child("general").child(menuItemKey!!)
         foodMenuReference.removeValue().addOnCompleteListener { task ->
             if(task.isSuccessful){
                 menuItems.removeAt(position)

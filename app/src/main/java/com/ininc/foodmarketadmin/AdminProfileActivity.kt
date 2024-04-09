@@ -68,7 +68,7 @@ class AdminProfileActivity : AppCompatActivity() {
     private fun retrieveUserData() {
         val currentUserUid=auth.currentUser?.uid
         if(currentUserUid!=null){
-            val userReference=adminReference.child(currentUserUid)
+            val userReference=adminReference.child("seller").child(currentUserUid)
             userReference.addListenerForSingleValueEvent(object:ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if(snapshot.exists()){
@@ -111,7 +111,7 @@ class AdminProfileActivity : AppCompatActivity() {
         var updatePassword=binding.idpasswordetv.text.toString()
         val currentUserUid=auth.currentUser?.uid
         if(currentUserUid != null){
-            val userReference=adminReference.child(currentUserUid)
+            val userReference=adminReference.child("seller").child(currentUserUid)
             userReference.child("name").setValue(updateName)
             userReference.child("email").setValue(updateEmail)
             userReference.child("password").setValue(updatePassword)

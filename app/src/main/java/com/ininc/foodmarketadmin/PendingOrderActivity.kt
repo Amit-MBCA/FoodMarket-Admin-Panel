@@ -103,7 +103,8 @@ class PendingOrderActivity : AppCompatActivity(), PendingOrderAdapter.OnItemClic
         //Update order acceptance in user's BuyHistory and OrderDetails
         val userIdOfClickedItem=listOfOrderItem[position].userUid
         val pushKeyOfClickedItem=listOfOrderItem[position].itemPushKey
-        val buyHistoryReference=database.reference.child("user").child(userIdOfClickedItem!!).child("BuyHistory").child(pushKeyOfClickedItem!!)
+        val buyHistoryReference=database.reference.child("user").child("buyer").child(userIdOfClickedItem!!).child("BuyHistory").child(pushKeyOfClickedItem!!)
+//        val buyHistoryReference=database.reference.child("user").child("buyer").child("BuyHistory").child(userIdOfClickedItem!!).child(pushKeyOfClickedItem!!)
         buyHistoryReference.child("orderAccepted").setValue(true)
 //        buyHistoryReference.child("AcceptedOrder").setValue(true)
         databaseOrderDetails.child(pushKeyOfClickedItem).child("orderAccepted").setValue(true)
