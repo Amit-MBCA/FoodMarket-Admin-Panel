@@ -88,6 +88,8 @@ dependencies {
 
     implementation ("io.github.chaosleung:pinview:1.4.4")
 
+    //Google Place Api Dependency
+    implementation ("com.google.android.libraries.places:places:3.3.0")
 
 
 

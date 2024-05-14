@@ -11,6 +11,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.google.android.gms.common.api.Status
+import com.google.android.libraries.places.api.Places
+import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment
+import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 //import com.android.volley.Request
 //import com.android.volley.toolbox.StringRequest
 //import com.android.volley.toolbox.Volley
@@ -37,8 +42,26 @@ class SignUpActivity : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-
+//        setContentView(binding.root)
+//        if(!Places.isInitialized()){
+//            Places.initialize(applicationContext,"AIzaSyBOD5-j2ELNi1GuIbPEZntT1NLHKassw4")
+//        }
+//        val autocompleteSupportFragment=(supportFragmentManager.findFragmentById(R.id.placeFragment) as AutocompleteSupportFragment).setPlaceFields(
+//            listOf(Place.Field.LAT_LNG,Place.Field.NAME)
+//        )
+//        autocompleteSupportFragment.setOnPlaceSelectedListener(object :PlaceSelectionListener{
+//            override fun onError(p0: Status) {
+//                Log.e("error",p0.statusMessage.toString())
+//            }
+//
+//            override fun onPlaceSelected(p0: Place){
+//                if(p0.latLng!=null){
+//                    val latLng=p0.latLng
+//                    Toast.makeText(this@SignUpActivity,"LatLng: ${latLng!!.toString}",Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//
+//        })
         //initialize firebase auth
         auth=Firebase.auth
         //initialize firebase database
@@ -50,7 +73,7 @@ class SignUpActivity : AppCompatActivity() {
         binding.idlistoflocation.onItemClickListener{
 
         }
-//        getCitiesNames()
+        getCitiesNames()
         binding.idcreateaccountbtn.setOnClickListener{
             email=binding.idemailorphone.text.toString().trim()
             userName=binding.idnameofowner.text.toString()
@@ -71,17 +94,17 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun getCitiesNames() {
         val queue = Volley.newRequestQueue(this)
-        val url = "https://amit-mbca.github.io/FoodMarket-Admin-Panel/cities.json"
+//        val url = "https://amit-mbca.github.io/FoodMarket-Admin-Panel/cities.json"
 
         val stringRequest = StringRequest(
             Request.Method.GET, citiesUrl,
             { response ->
                 var responeObj=JSONObject(response)
                 responeObj.get("name")
-                Log.d("Cities","Cities Name: $responeObj")
+                Log.d("Cities","Cities Name: "+responeObj.toString())
             },
             { error ->
-
+                Toast.makeText(this,"${error.localizedMessage}",Toast.LENGTH_SHORT).show()
             })
 
 // Add the request to the RequestQueue.
